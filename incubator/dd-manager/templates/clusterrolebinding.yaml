@@ -13,5 +13,5 @@ roleRef:
   name: {{ include "dd-manager.fullname" . }}
 subjects:
   - kind: ServiceAccount
-    name: {{ template "rbac-manager.fullname" . }}
+    name: {{ template "dd-manager.fullname" . }}
     namespace: {{ .Release.Namespace | quote }}

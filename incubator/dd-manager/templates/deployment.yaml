@@ -30,7 +30,7 @@ spec:
       {{- if .Values.image.private }}
       imagePullSecrets:
         - name: {{ .Values.image.pullSecret }}    
-      {{- endif }}
+      {{- end }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}

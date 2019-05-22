@@ -4,11 +4,7 @@ image:
   pullPolicy: IfNotPresent
   private: false
   pullSecret: ""
-
-nameOverride: ""
-fullnameOverride: ""
-
-resources: {}
+resources:
   limits:
     cpu: 100m
     memory: 128Mi
