@@ -1,0 +1,14 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: {{ include "dd-manager.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "dd-manager.name" . }}
+    helm.sh/chart: {{ include "dd-manager.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+data:
+  DD_API_KEY: {{ .Values.datadog.apiKey }}
+  DD_APP_KEY: {{ .Values.datadog.appKey }}
+  OWNER: {{ .Values.owner }}
+  DEFINITIONS_PATH: {{ .Values.definitionsPath }}

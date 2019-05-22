@@ -2,8 +2,6 @@ image:
   repository: quay.io/reactiveops/dd-manager
   tag: dev-0.1.0
   pullPolicy: IfNotPresent
-  private: false
-  pullSecret: ""
 resources:
   limits:
     cpu: 100m
@@ -14,3 +12,10 @@ resources:
 nodeSelector: {}
 tolerations: []
 affinity: {}
+
+datadog:
+  apiKey: ""
+  appKey: ""
+
+definitionsPath: conf.yml
+owner: dd-manager

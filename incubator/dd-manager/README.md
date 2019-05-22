@@ -19,8 +19,6 @@ Parameter | Description | Default
 `image.repository` | Docker image repo  | `quay.io/reactiveops/dd-manager`
 `image.tag` | Docker image tag  | `dev-0.1.0`
 `image.pullPolicy` | Docker image pull policy  | `IfNotPresent`
-`image.private` | boolean indicating if the registry is private | `false`
-`image.pullSecret` | if `image.private` is true, will use this secret as the pull secret | ` `
 `resources.requests.cpu` | CPU resource request | `100m`
 `resources.requests.memory` | Memory resource request | `128Mi`
 `resources.limits.cpu` | CPU resource limit | `100m`
@@ -28,3 +26,7 @@ Parameter | Description | Default
 `nodeSelector` | Deployment nodeSelector | `{}`
 `tolerations` | Deployment tolerations | `[]`
 `affinity` | Deployment affinity | `{}`
+`datadog.apiKey` | Datadog api key | `""`
+`datadog.appKey` | Datadog app key | `""`
+`definitionsPath` | The path to the monitor definitions configuration. This can be a local path or a URL. | `""`
+`owner` | A unique name to designate as the owner. This will be applied as a tag to identified managed monitors. | `dd-manager`

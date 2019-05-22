@@ -26,11 +26,12 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          envFrom:
+          - configMapRef:
+              name: {{ include "dd-manager.fullname" . }}
+          - secretRef:
+              name: {{ include "dd-manager.fullname" . }}
       {{- with .Values.nodeSelector }}
-      {{- if .Values.image.private }}
-      imagePullSecrets:
-        - name: {{ .Values.image.pullSecret }}    
-      {{- end }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
