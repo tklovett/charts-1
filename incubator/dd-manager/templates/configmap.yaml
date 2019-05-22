@@ -12,3 +12,4 @@ data:
   DD_APP_KEY: {{ .Values.datadog.appKey }}
   OWNER: {{ .Values.owner }}
   DEFINITIONS_PATH: {{ .Values.definitionsPath }}
+  DRY_RUN: {{ .Values.DryRun | quote }}

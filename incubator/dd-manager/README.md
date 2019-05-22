@@ -30,3 +30,4 @@ Parameter | Description | Default
 `datadog.appKey` | Datadog app key | `""`
 `definitionsPath` | The path to the monitor definitions configuration. This can be a local path or a URL. | `""`
 `owner` | A unique name to designate as the owner. This will be applied as a tag to identified managed monitors. | `dd-manager`
+`DryRun` | when set to true monitors will not be managed in datadog. | `false`

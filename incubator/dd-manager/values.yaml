@@ -1,6 +1,6 @@
 image:
   repository: quay.io/reactiveops/dd-manager
-  tag: dev-0.1.1
+  tag: dev-0.2.0
   pullPolicy: IfNotPresent
 resources:
   limits:
@@ -19,3 +19,4 @@ datadog:
 
 definitionsPath: conf.yml
 owner: dd-manager
+DryRun: false
