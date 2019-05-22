@@ -17,7 +17,7 @@ Kubernetes 1.11+, Helm 2.13+
 Parameter | Description | Default
 --- | --- | ---
 `image.repository` | Docker image repo  | `quay.io/reactiveops/dd-manager`
-`image.tag` | Docker image tag  | `dev-0.1.0`
+`image.tag` | Docker image tag  | `dev-0.1.1`
 `image.pullPolicy` | Docker image pull policy  | `IfNotPresent`
 `resources.requests.cpu` | CPU resource request | `100m`
 `resources.requests.memory` | Memory resource request | `128Mi`
