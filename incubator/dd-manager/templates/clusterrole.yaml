@@ -11,11 +11,18 @@ rules:
   - apiGroups:
       - "" # core
     resources:
-      - deployments
       - namespaces
       - pods
     verbs:
       - get
       - list
       - watch
-
+  - apiGroups:
+      - extensions
+      - apps
+    resources:
+      - deployments
+    verbs:
+      - get
+      - list
+      - watch
