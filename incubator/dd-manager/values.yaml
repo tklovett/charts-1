@@ -2,6 +2,8 @@ image:
   repository: quay.io/reactiveops/dd-manager
   tag: dev-0.1.0
   pullPolicy: IfNotPresent
+  private: false
+  pullSecret: ""
 
 nameOverride: ""
 fullnameOverride: ""
