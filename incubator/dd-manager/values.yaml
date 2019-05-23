@@ -1,6 +1,6 @@
 image:
   repository: quay.io/reactiveops/dd-manager
-  tag: dev-0.2.0
+  tag: dev-0.2.3
   pullPolicy: IfNotPresent
 resources:
   limits:
