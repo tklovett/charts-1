@@ -1,0 +1,13 @@
+{{- if .Values.custom_config.enabled }}
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: {{ include "dd-manager.fullname" . }}-data
+  labels:
+    app.kubernetes.io/name: {{ include "dd-manager.name" . }}
+    helm.sh/chart: {{ include "dd-manager.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+data:
+  config.yml: {{ toYaml .Values.custom_config.data | indent 4 }}
+{{- end }}

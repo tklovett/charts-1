@@ -11,5 +11,9 @@ data:
   DD_API_KEY: {{ .Values.datadog.apiKey }}
   DD_APP_KEY: {{ .Values.datadog.appKey }}
   OWNER: {{ .Values.owner }}
-  DEFINITIONS_PATH: {{ .Values.definitionsPath }}
   DRY_RUN: {{ .Values.DryRun | quote }}
+{{- if .Values.custom_config.enabled }}
+  DEFINITIONS_PATH: /etc/config/config.yml
+{{- else }}
+  DEFINITIONS_PATH: {{ .Values.definitionsPath }}
+{{- end }}

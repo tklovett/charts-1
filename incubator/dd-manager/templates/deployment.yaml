@@ -31,6 +31,15 @@ spec:
               name: {{ include "dd-manager.fullname" . }}
           - secretRef:
               name: {{ include "dd-manager.fullname" . }}
+          {{- if .Values.custom_config.enabled }}
+          volumeMounts:
+          - name: config-data
+            mountPath: /etc/config
+      volumes:
+      - name: config-data
+        configMap:
+          name: {{ include "dd-manager.fullname" . }}-data
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
